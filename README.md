@@ -1,5 +1,10 @@
 # PaPer_DJ-Support
 
+ACCESO REMOTO A TRAVES DE GOOGLE CHROME
+
+* https://remotedesktop.google.com/home
+
+
 Aplicaciones de Soporte Técnico
 -------------------------------------------------------------
 
