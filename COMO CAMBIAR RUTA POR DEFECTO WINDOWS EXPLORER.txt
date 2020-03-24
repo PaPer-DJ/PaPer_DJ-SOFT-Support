@@ -1,0 +1,33 @@
+Cómo cambiar la ruta por defecto del Explorador de archivos de Win 7
+BY GEEKAZOS · 05/12/2010
+
+6
+SHARES
+204
+Mi PCDesde que llegó Windows Vista, el Explorador de archivos ya no es lo que era: la estructura clásica de carpetas y archivos se complica con más y más carpetas virtuales, accesos directos, etc.
+
+En Windows 7, por ejemplo, la carpeta que aparece al abrir un nuevo explorador de archivos, ya sea desde la Barra de tareas o mediante el atajo de teclado Win + E es Bibliotecas.
+
+No tenemos nada en contra de las bibliotecas, pero dudamos que sea la mejor opción como carpeta por defecto. ¿Te gustaría cambiarla?
+
+
+1. Propiedades
+Lo primero de todo, tienes hacer clic derecho en el icono del Explorador de archivos, en la Barra de tareas.
+
+Clic derecho
+
+Después, haz otro clic derecho en Explorador de Windows (el número 2), y selecciona Propiedades.
+
+2. Destino
+Ahora toca el momento de modificar el acceso directo. Lo único que tienes que hacer es añadir la ruta completa que quieres que se abra por defecto, detrás de explorer.exe
+
+Ruta
+
+Eso te sirve para rutas fijas, pero quizá quieras abrir carpetas especiales como Equipo o Documentos. Puedes hacerlo mediante GUID, cambiando el campo Destino por los siguientes valores:
+
+Equipo: %SystemRoot%\explorer.exe /e,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}
+Documentos: %SystemRoot%\explorer.exe /n,::{450D8FBA-AD25-11D0-98A8-0800361B1103}
+Red: %SystemRoot%\explorer.exe /N,::{208D2C60-3AEA-1069-A2D7-08002B30309D}
+Panel de Control: %SystemRoot%\explorer.exe /N,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}\::{21EC2020-3AEA-1069-A2DD-08002B30309D
+Herramientas administrativas: %SystemRoot%\explorer.exe /N,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}\::{21EC2020-3AEA-1069-A2DD-08002B30309D}\::{D20EA4E1-3957-11d2-A40B-0C5020524153}
+Este pequeño truco también hará que los exploradores que abras con Win + E se inicien en dicha ruta.
